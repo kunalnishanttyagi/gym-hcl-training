@@ -5,6 +5,7 @@ import WorkoutTracker from "../../components/workouttracker";
 
 import { useAuth } from "@/context/AuthContext";
 import DietPlanner from "@/components/dietplannarr";
+import Link from "next/link";
 const workouts = {
   beginner: { title: "Beginner Workout", exercises: ["Squats", "Push-ups", "Dumbbell Rows", "Shoulder Press", "Plank"] },
   intermediate: { title: "Intermediate Workout", exercises: ["Bench Press", "Tricep Dips", "Lat Pulldown", "Bicep Curls", "Face Pulls"] },
@@ -56,6 +57,9 @@ function WorkoutPage() {
       <h1 className="text-center text-2xl font-bold my-6">Your Workout Plan</h1>
       <WorkoutTracker workout={workouts[category]} />
       <DietPlanner></DietPlanner>
+      <Link href="https://public.tableau.com/app/profile/aditya.singh.parmar3960/viz/Book1_17429099525930/Dashboard1?publish=yes" className=" flex justify-center items-center w-full mt-[30px]" >
+        <button className=" w-[100px] h-[50px] bg-blue-600 rounded-md m-[40px]" >Dashboard</button>
+      </Link>
     </div>
   );
 }
